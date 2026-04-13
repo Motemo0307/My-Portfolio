@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Bread Foundation - Sponsors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="image/logo.png" alt="Daily Bread Foundation Logo">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</header>
+
+ <nav>
+  <button data-tooltip="Home" onclick="window.location.href='index.html'">Home</button>
+  <button data-tooltip="Gallery" onclick="window.location.href='gallery.html'">Gallery</button>
+  <button data-tooltip="Services" onclick="window.location.href='services.html'">Services</button>
+  <button data-tooltip="Sponsors" onclick="window.location.href='sponsors.html'">Sponsors</button>
+  <button data-tooltip="About Us" onclick="window.location.href='about.html'">About Us</button>
+  <button data-tooltip="Contact Us" onclick="window.location.href='contact.html'">Contact Us</button>
+</nav>
+
+<script>
+  // Get the current page filename
+  const currentPage = window.location.pathname.split("/").pop();
+  
+  // Map filenames to button index in navbar
+  const buttonMap = {
+    "index.html": 0,
+    "gallery.html": 1,
+    "services.html": 2,
+    "sponsors.html": 3,
+    "about.html": 4,
+    "contact.html": 5
+  };
+  
+  // Add active-btn class to the correct button
+  const buttons = document.querySelectorAll("nav button");
+  const index = buttonMap[currentPage] ?? 0; // default to Home if not found
+  buttons[index].classList.add("active-btn");
+</script>
+
+<section class="sponsors">
+  <h2>Our Sponsors</h2>
+  <p>We are grateful to our sponsors who help us provide meals and support our community programs.</p>
+
+  <div class="sponsor-logos">
+    <div class="sponsor-card">
+      <img src="image/shoprite.png" alt="Shoprite Logo">
+      <p><strong>Shoprite</strong> – Contributing towards food parcels and meal programs.</p>
+    </div>
+
+    <div class="sponsor-card">
+      <img src="image/picknpay.png" alt="Pick n Pay Logo">
+      <p><strong>Pick n Pay</strong> – Partnering with us to fight hunger through grocery sponsorships.</p>
+    </div>
+
+    <div class="sponsor-card">
+      <img src="image/boxer.png" alt="Boxer Logo">
+      <p><strong>Boxer</strong> – Helping us reach more families with essential goods.</p>
+    </div>
+
+    <div class="sponsor-card">
+      <img src="image/spar.png" alt="SPAR Logo">
+      <p><strong>SPAR</strong> – Supporting communities with food donations and supplies.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Daily Bread Foundation. All Rights Reserved.</p>
+    <p>Email: info@dailybread.org.za | Phone: +27 123 456 789</p>
+    <p>Based in Tembisa, South Africa</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/login/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/accounts/login/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/login/" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

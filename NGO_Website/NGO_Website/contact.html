@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Bread Foundation - Contact Us</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="image/logo.png" alt="Daily Bread Foundation Logo">
+</header>
+
+<nav>
+  <button data-tooltip="Home" onclick="window.location.href='index.html'">Home</button>
+  <button data-tooltip="Gallery" onclick="window.location.href='gallery.html'">Gallery</button>
+  <button data-tooltip="Services" onclick="window.location.href='services.html'">Services</button>
+  <button data-tooltip="Sponsors" onclick="window.location.href='sponsors.html'">Sponsors</button>
+  <button data-tooltip="About Us" onclick="window.location.href='about.html'">About Us</button>
+  <button data-tooltip="Contact Us" onclick="window.location.href='contact.html'">Contact Us</button>
+</nav>
+
+<script>
+  // Highlight active page
+  const currentPage = window.location.pathname.split("/").pop();
+  const buttonMap = {
+    "index.html": 0,
+    "gallery.html": 1,
+    "services.html": 2,
+    "sponsors.html": 3,
+    "about.html": 4,
+    "contact.html": 5
+  };
+  const buttons = document.querySelectorAll("nav button");
+  const index = buttonMap[currentPage] ?? 0;
+  buttons[index].classList.add("active-btn");
+</script>
+
+<section>
+  <h2>Contact Us</h2>
+
+  <p><strong>Email:</strong> info@dailybread.org.za</p>
+  <p><strong>Phone:</strong> +27 123 456 789</p>
+  <p><strong>Address:</strong> Tembisa, South Africa</p>
+  <p><strong>Office Hours:</strong> Mon-Fri: 9am – 5pm</p>
+
+  <!-- Google Map -->
+  <h3>Find Us on Map</h3>
+  <div style="width:100%; height:350px;">
+    <iframe
+      width="100%"
+      height="350"
+      style="border:0; border-radius:10px;"
+      loading="lazy"
+      allowfullscreen
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.314845590921!2d28.2233!3d-25.9986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95134e4b82d62f%3A0x50df9d35a7fa6122!2sTembisa%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1710000000000">
+    </iframe>
+  </div>
+
+  <!-- Contact Form -->
+  <h3>Send Us a Message</h3>
+  <form id="contact-form">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Follow Us Section -->
+  <h3>Follow Us</h3>
+  <div class="social-links">
+
+    <div class="social-item">
+      <a href="https://www.facebook.com/login/" target="_blank" title="Facebook">
+         <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook Icon" width="48" height="48">
+      </a>
+      <p>Facebook</p>
+    </div>
+
+    <div class="social-item">
+      <a href="https://www.instagram.com/accounts/login/" target="_blank" title="Instagram">
+        <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram Icon" width="48" height="48">
+      </a>
+      <p>Instagram</p>
+    </div>
+
+    <div class="social-item">
+      <a href="https://twitter.com/login/" target="_blank" title="Twitter">
+        <img src="https://img.icons8.com/color/48/twitter--v1.png" alt="Twitter Icon" width="48" height="48">
+      </a>
+      <p>Twitter</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Daily Bread Foundation. All Rights Reserved.</p>
+    <p>Email: info@dailybread.org.za | Phone: +27 123 456 789</p>
+    <p>Based in Tembisa, South Africa</p>
+  </div>
+</footer>
+
+<!-- EmailJS Integration -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+      emailjs.init("A-zY5gtOYydjHJEaw"); 
+  })();
+</script>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // SERVICE_ID and TEMPLATE_ID with EmailJS IDs
+  emailjs.sendForm('DailyBreadService', 'template_in0hsyd', this)
+    .then(function() {
+      alert('Message sent successfully!');
+      document.getElementById('contact-form').reset();
+    }, function(error) {
+      alert('Failed to send message. Please try again later.');
+      console.log('EmailJS error:', error);
+    });
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

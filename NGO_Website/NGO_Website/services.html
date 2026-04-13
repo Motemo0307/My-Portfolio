@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Bread Foundation - Services</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="image/logo.png" alt="Daily Bread Foundation Logo">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</header>
+
+ <nav>
+  <button data-tooltip="Home" onclick="window.location.href='index.html'">Home</button>
+  <button data-tooltip="Gallery" onclick="window.location.href='gallery.html'">Gallery</button>
+  <button data-tooltip="Services" onclick="window.location.href='services.html'">Services</button>
+  <button data-tooltip="Sponsors" onclick="window.location.href='sponsors.html'">Sponsors</button>
+  <button data-tooltip="About Us" onclick="window.location.href='about.html'">About Us</button>
+  <button data-tooltip="Contact Us" onclick="window.location.href='contact.html'">Contact Us</button>
+</nav>
+<script>
+  // Get the current page filename
+  const currentPage = window.location.pathname.split("/").pop();
+  
+  // Map filenames to button index in navbar
+  const buttonMap = {
+    "index.html": 0,
+    "gallery.html": 1,
+    "services.html": 2,
+    "sponsors.html": 3,
+    "about.html": 4,
+    "contact.html": 5
+  };
+  
+  // Add active-btn class to the correct button
+  const buttons = document.querySelectorAll("nav button");
+  const index = buttonMap[currentPage] ?? 0; // default to Home if not found
+  buttons[index].classList.add("active-btn");
+</script>
+  
+<section>
+  <h2>Our Services</h2>
+  <div class="programs">
+
+    <!-- Daily Hot Meals -->
+    <div class="card">
+      <h3>Daily Hot Meals</h3>
+      <p>Providing nutritious meals daily to those in need.</p>
+      <img src="image/hot-meals.jpg" alt="Daily Hot Meals" style="width:100%; max-width:400px; border-radius:10px; margin-top:10px;">
+      <p><strong>Every day</strong>, we serve hot, freshly prepared meals to children, families, and individuals who would otherwise go hungry. These meals are more than just food — they bring hope, dignity, and strength to our community.</p>
+    </div>
+
+    <!-- Food Parcels -->
+    <div class="card">
+      <h3>Food Parcels</h3>
+      <p>Monthly essential grocery packs delivered to households.</p>
+      <img src="image/food-parcel.jpg" alt="Food Parcel Distribution" style="width:100%; max-width:400px; border-radius:10px; margin-top:10px;">
+      <p><strong>Every month</strong>, our team distributes food parcels filled with essential groceries. These parcels bring hope and relief to families facing hunger, ensuring children and parents don’t go to bed on an empty stomach.</p>
+    </div>
+
+    <!-- Workshops -->
+    <div class="card">
+      <h3>Workshops</h3>
+      <p>Nutrition and food safety training for families.</p>
+      <img src="image/workshop.jpg" alt="Community Workshop" style="width:100%; max-width:400px; border-radius:10px; margin-top:10px;">
+      <p>Our <strong>community workshops</strong> empower families with knowledge on nutrition, food safety, and affordable cooking. By learning together, families gain the skills they need to stay healthy, save money, and build stronger households.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Daily Bread Foundation. All Rights Reserved.</p>
+    <p>Email: info@dailybread.org.za | Phone: +27 123 456 789</p>
+    <p>Based in Tembisa, South Africa</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/login/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/accounts/login/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/login/" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

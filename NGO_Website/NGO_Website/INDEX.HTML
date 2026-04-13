@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Bread Foundation - Home</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="image/logo.png" alt="Daily Bread Foundation Logo">
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+  <button data-tooltip="Home" onclick="window.location.href='index.html'">Home</button>
+  <button data-tooltip="Gallery" onclick="window.location.href='gallery.html'">Gallery</button>
+  <button data-tooltip="Services" onclick="window.location.href='services.html'">Services</button>
+  <button data-tooltip="Sponsors" onclick="window.location.href='sponsors.html'">Sponsors</button>
+  <button data-tooltip="About Us" onclick="window.location.href='about.html'">About Us</button>
+  <button data-tooltip="Contact Us" onclick="window.location.href='contact.html'">Contact Us</button>
+</nav>
+
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1 id="hero-title"></h1>
+    <h2 id="hero-subtitle"></h2>
+    <div class="buttons">
+      <button onclick="window.location.href='contact.html'">Donate Now</button>
+      <button onclick="window.location.href='contact.html'">Volunteer</button>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section>
+    <h2>Our Work in Pictures</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img id="food1" src="image/food1.jpg" alt="Food 1">
+        <div id="caption1" class="image-caption">Feeding Hope, One Meal at a Time.</div>
+      </div>
+      <div class="gallery-item">
+        <img id="food2" src="image/food2.jpg" alt="Food 2">
+        <div id="caption2" class="image-caption">Together, We Make a Difference.</div>
+      </div>
+      <div class="gallery-item">
+        <img id="food3" src="image/food3.jpg" alt="Food 3">
+        <div id="caption3" class="image-caption">Building Stronger Communities.</div>
+      </div>
+      <div class="gallery-item">
+        <img id="food4" src="image/food4.jpg" alt="Food 4">
+        <div id="caption4" class="image-caption">Spreading Love, Sharing Bread.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img src="" alt="Preview" id="lightbox-img">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Daily Bread Foundation. All Rights Reserved.</p>
+      <p>Email: info@dailybread.org.za | Phone: +27 123 456 789</p>
+      <p>Based in Tembisa, South Africa</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/login/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/accounts/login/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/login/" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>

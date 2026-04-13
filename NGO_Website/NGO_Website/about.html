@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Bread Foundation - About Us</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="image/logo.png" alt="Daily Bread Foundation Logo">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</header>
+
+ <nav>
+  <button data-tooltip="Home" onclick="window.location.href='index.html'">Home</button>
+  <button data-tooltip="Gallery" onclick="window.location.href='gallery.html'">Gallery</button>
+  <button data-tooltip="Services" onclick="window.location.href='services.html'">Services</button>
+  <button data-tooltip="Sponsors" onclick="window.location.href='sponsors.html'">Sponsors</button>
+  <button data-tooltip="About Us" onclick="window.location.href='about.html'">About Us</button>
+  <button data-tooltip="Contact Us" onclick="window.location.href='contact.html'">Contact Us</button>
+</nav>
+
+<script>
+  // Get the current page filename
+  const currentPage = window.location.pathname.split("/").pop();
+  
+  // Map filenames to button index in navbar
+  const buttonMap = {
+    "index.html": 0,
+    "gallery.html": 1,
+    "services.html": 2,
+    "sponsors.html": 3,
+    "about.html": 4,
+    "contact.html": 5
+  };
+  
+  // Add active-btn class to the correct button
+  const buttons = document.querySelectorAll("nav button");
+  const index = buttonMap[currentPage] ?? 0; // default to Home if not found
+  buttons[index].classList.add("active-btn");
+</script>
+  
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    Daily Bread Foundation is a non-profit organization based in Tembisa, South Africa, dedicated to feeding the hungry and empowering vulnerable families through food security programs, nutrition education, and community support.
+  </p>
+
+  <h3>Our Mission</h3>
+  <p>
+    To fight hunger and restore hope by providing daily meals, food parcels, and nutrition awareness programs for children, families, and individuals in need.
+  </p>
+
+  <h3>Our Vision</h3>
+  <p>
+    A community where no one goes to bed hungry and every family has access to healthy, affordable, and nutritious meals.
+  </p>
+
+  <h3>Our Story</h3>
+  <p>
+    Founded in 2025, Daily Bread Foundation began with a small soup kitchen serving a handful of families. Over time, with the support of sponsors and volunteers, it has grown into a well-recognized initiative that feeds hundreds of people weekly. Today, we continue to expand our programs to address the root causes of hunger and poverty.
+  </p>
+
+  <h3>Our Impact</h3>
+  <ul>
+    <li>Over <strong>1,000 meals</strong> served every month.</li>
+    <li>Food parcels delivered to <strong>200+ households</strong> in need.</li>
+    <li>Nutrition workshops reaching <strong>schools and families</strong>.</li>
+    <li>Partnerships with leading sponsors and supermarkets.</li>
+  </ul>
+
+  <h3>Meet Our Team</h3>
+  <p>
+    Our foundation is powered by passionate volunteers, dedicated community leaders, and caring sponsors who believe in making a difference, one meal at a time.
+  </p>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Daily Bread Foundation. All Rights Reserved.</p>
+    <p>Email: info@dailybread.org.za | Phone: +27 123 456 789</p>
+    <p>Based in Tembisa, South Africa</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/login/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/accounts/login/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/login/" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
