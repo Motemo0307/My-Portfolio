@@ -28,6 +28,7 @@ This website was created to help the organization:
     Image Slider (Home Page)
 The homepage contains a 4-image slider that automatically changes every few seconds.
 Each image displays a short inspiring message related to charity and community support.
+
 📂 Project Structure
 
 /DailyBreadFoundation
