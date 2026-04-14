@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ===== Simple form validation (if you have a contact form) =====
+  // ===== Simple form validation =====
   const form = document.querySelector("form");
   if (form) {
     form.addEventListener("submit", function (e) {
